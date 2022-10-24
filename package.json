@@ -1,0 +1,21 @@
+{
+  "name": "todo-with-palywright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgorbatenko/todo-with-palywright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sgorbatenko/todo-with-palywright/issues"
+  },
+  "homepage": "https://github.com/sgorbatenko/todo-with-palywright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.27.1"
+  }
+}
