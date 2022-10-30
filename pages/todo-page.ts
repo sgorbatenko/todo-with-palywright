@@ -24,10 +24,22 @@ export class TodoAppPage {
     await this.newTodoInput.press('Enter');
   }
 
-  async edit(existingTodo, newTodo){
+  async edit(existingTodo: string, newTodo: string){
     const task = await this.page.getByText(existingTodo);
     await task.dblclick();
     await this.editInput.fill(newTodo);
     await this.editInput.press('Enter');
+  }  
+  
+  async complete(todo: string){
+    const task = await this.page.locator('.todo-list li', { hasText: todo });
+    await task.locator('.toggle').check();
+    return task;
+  }
+
+  async delete(todo: string){
+    const task = await this.page.locator('.todo-list li', { hasText: todo });
+    await task.hover();
+    await task.locator('.destroy').click();
   }
 }
